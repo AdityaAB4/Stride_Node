@@ -10,6 +10,8 @@ body {
   margin: 0;
   height: 100%;
   font-size: 100%;
+  /* background-color: #3b3c38; */
+  background-color:#272727;
 }
 
 .heading-primary {
@@ -19,8 +21,15 @@ body {
 }
 
 .twd {
-  color: rgb(248, 248, 37);
+  /* color: #dc392d; */
+  /* rgba(290, 35, 48) */
+  color: #ff2330; 
 }
+
+.stride-home-about{
+  color:#fff;
+}
+
 
 .hr-line {
   color: white;
@@ -34,6 +43,9 @@ body {
   font-weight: 800;
   letter-spacing: 0px;
   margin-left: 54px;
+  animation-name: movein;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 .heading-primary-sub {
   margin-bottom: 100px;
@@ -41,8 +53,49 @@ body {
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 0px;
+  animation-name: moveinr;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out;
 }
+
+@keyframes movein {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+    
+  }
+  100% {
+    opacity:1;
+    transform: translate(0);
+
+  }
+}
+@keyframes moveinr {
+  0% {
+    opacity: 0;
+    /* transform: rotate(0deg); */
+
+  }
+  80% {
+    /* transform: rotate(180deg); */
+    
+  }
+  100% {
+    opacity:1;
+    /* transform: translate(0); */
+
+  }
+}
+
+
+
+
+
 .heading-welcome {
+  color: #fff;
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 30px;
@@ -52,33 +105,15 @@ body {
   text-transform: uppercase;
 }
 
+
+
 .slider {
   overflow: hidden;
   width: 100%;
   height: 90vh;
 }
 
-/* .slider figure div {
-    float: left;
-    width: 20%;
-  } */
 
-/* .slider figure img {
-    width: 100%;
-    height: 90vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    float: left;
-  } */
-
-/* .slider figure {
-    position: center;
-    width: 500%;
-    margin: 0;
-    animation: animate 10s infinite;
-    transition: 4000ms;
-  }
-   */
 .main {
   position: relative;
   color: #fff;
@@ -86,7 +121,7 @@ body {
   text-align: center;
   padding-top: 250px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/img/Slider1.jpg");
+    url("/img/sound_2-wallpaper-1920x600.jpg");
 
   width: 100%;
   /* height: 90vh; */
@@ -97,10 +132,10 @@ body {
 .btn-text {
   font-size: 1.1rem;
   font-weight: 1200;
-  color: #f5f52d;
+  color: #ff2330;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #e6d92a;
+  border-bottom: 1px solid #fc1020;
   padding: 3px;
   transition: all 0.2s;
   display: inline-block;
@@ -115,75 +150,26 @@ body {
 .btn-text:link,
 .btn-text:visited {
   font-size: 1.2rem;
-  color: #f1f157;
+  color:  #fc1020;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 2px solid #e6d92a;
+  border-bottom: 2px solid #eb1220;
   padding: 3px;
 }
 .btn-text:hover {
-  background-color: #f5f52d;
+  background-color: #eb1220;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
-/* @keyframes animate {
-    0% {
-      left: 0;
-    }
-    10% {
-      left: 0;
-    }
-    12% {
-      left: -100%;
-    }
-    22% {
-      left: -100%;
-    }
-    34% {
-      left: -200%;
-    }
-    36% {
-      left: -300%;
-    }
-    46% {
-      left: -400%;
-    }
-    48% {
-      left: -400%;
-    }
-    58% {
-      left: -400%;
-    }
-    70% {
-      left: -300%;
-    }
-    72% {
-      left: -300%;
-    }
-    82% {
-      left: -200%;
-    }
-    84% {
-      left: -100%;
-    }
-    92% {
-      left: -100%;
-    }
-    92% {
-      left: 0%;
-    }
-  } */
 
-/* grid-widht: 114rem
-     gutter-vertical: 8rem
-     gutter-horizontal: 6rem
-  
-  */
+
+
+
 
 .row {
   max-width: 114rem;
-  background-color: white;
+  /* background-color: #3b3c38; */
   margin: 2rem auto;
   margin-bottom: 80px;
   margin-left: 1rem;
@@ -193,6 +179,9 @@ body {
   width: 100%;
 }
 
+.About-ses h1{
+  color: #d3d3d3;
+}
 
 .row_about {
   max-width: 114rem;
@@ -203,6 +192,7 @@ body {
 }
 
 .row .col-1-of-3 {
+  margin-top: 1rem;
   width: calc((100% - 2 * (2rem)) / 3);
   float: left;
   margin-right: 1rem;
@@ -218,7 +208,7 @@ body {
   /* margin-left: 27px; */
   width: calc((100% - 6rem) / 2);
   float: left;
-  /* background-color: gray; */
+  background-color:#272727;
 }
 
  .contactUs {
@@ -226,8 +216,23 @@ body {
 }
 
 .h4address {
+  color: #bebdbd;
+  
   margin-top: 38px;
   display: block;
+}
+
+.col12-text{
+  color: #fff;
+}
+.col12-text_h5{
+  color: rgb(233, 37, 37);
+}
+.col12-text_p{
+  color: rgb(190, 184, 184);
+}
+.col12_mission_text1{
+  color: rgb(190, 184, 184);
 }
 
 .row_about .col12-text_h5 {
@@ -247,6 +252,7 @@ body {
 }
 .About-ses {
   margin-left: 35px;
+  color:  rgb(190, 184, 184);
 }
 .card {
   background-color: white;
@@ -257,18 +263,18 @@ body {
 
 .card__picture {
   background-size: cover;
-  height: 23rem;
+  height: 15rem;
   overflow: hidden;
 }
 
 .card__picture--1 {
-  background-image: url("/img/Industria-Heat-Pump2-1.jpg");
+  background-image: url("/img/paint-1.jpg");
 }
 .card__picture--2 {
-  background-image: url("/img/Evaporators.jpg");
+  background-image: url("/img/paint-2.jpg");
 }
 .card__picture--3 {
-  background-image: url("/img/Services.jpg");
+  background-image: url("/img/paint-3.jpg");
 }
 
 .desc {
@@ -277,9 +283,19 @@ body {
 
 .card__details {
   font-size: 800;
-  color: yellow;
+  color: #fff;
   background-color: #012f5d;
   text-align: center;
+}
+
+.card-name_atag{
+  color: #fff;
+  text-decoration: none;
+}
+.card-name_atag:hover{
+  color: #eb1220;
+  text-decoration: none;
+  transition: 0.4s ease-out;
 }
 
 /* .parallax {
@@ -291,6 +307,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   } */
+
+ .h4address .fas .fa-envelope .twd 
+  {margin-top: 33px;}
 
 .parallaxone {
   min-height: 100%;
@@ -306,7 +325,7 @@ body {
   position: relative;
   left: 300px;
   top: 300px;
-  width: 725px;
+  width: 666px;
   height: 50px;
   padding-top: 9px;
   padding-right: 5px;
@@ -342,7 +361,7 @@ body {
 }
 
 .footer .footer-content .about h1 span {
-  color: #e6d92a;
+  color: #fc1020;
 }
 .footer .footer-content .about .contact span {
   display: block;
@@ -440,6 +459,8 @@ body {
   flex-wrap: wrap;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
   .heading-primary {
     color: #ffffff;
@@ -529,14 +550,29 @@ body {
 
   .row {
     width: 100%;
-    background-color: white;
+    background-color: #272727;
     margin: 2rem auto;
     margin-bottom: 80px;
     margin-left: 0rem;
     height: 700px;
-    background: #ffffff;
+    /* background: #ffffff;* */
     display: block;
   }
+
+  .section-tours {
+    height: 2819px;
+  }
+
+  /* .row {
+    width: 55%;
+    background-color: #272727;
+    margin: 2rem auto;
+    margin-bottom: 80px;
+    margin-left: 10rem;
+    height: 700px;
+     background: #ffffff; 
+     display: flex; 
+} */
 
   .row .col-1-of-3 {
     width: 100%;
@@ -563,24 +599,54 @@ body {
     /* background-color: gray; */
   }
 
+  .h4address {
+    color: #bebdbd;
+    /* color: #1b1a1a; */
+    margin-top: 19px;
+    display: block;
+}
+
   .about-title{
     width: 100%;
   }
 
   .grid-test {
-    height:670px;
+    height:700px;
+    background-color: #3b3c38;
+
   }
 
   .grid-test-contact {
-    height: 800px;
+    height: 670px;
+    background-color: #3b3c38;
     
   }
+
+ 
+
   .row .col12-text_h5 {
     margin-top: 25px;
   }
 
   .row desc {
     margin-bottom: 10px;
+  }
+
+
+  .card__picture {
+    background-size: cover;
+    height: 45rem;
+    overflow: hidden;
+  }
+
+  .card__picture--1 {
+    background-image: url("/img/paint-1_768.jpg");
+  }
+  .card__picture--2 {
+    background-image: url("/img/paint-2_768.jpg");
+  }
+  .card__picture--3 {
+    background-image: url("/img/paint-3_768.jpg");
   }
 
   .parallaxone h2 {
@@ -623,7 +689,7 @@ body {
   }
 
   .footer .footer-content .about h1 span {
-    color: #e6d92a;
+    color: #fc1020;
   }
   .footer .footer-content .about .contact span {
     display: block;
@@ -699,6 +765,25 @@ body {
 }
 
 @media only screen and (max-width: 680px) {
+ 
+  .card__picture {
+    background-size: cover;
+    height: 45rem;
+    overflow: hidden;
+  }
+
+  .card__picture--1 {
+    background-image: url("/img/paint-1.jpg");
+  }
+  .card__picture--2 {
+    background-image: url("/img/paint-2.jpg");
+  }
+  .card__picture--3 {
+    background-image: url("/img/paint-3.jpg");
+  }
+
+ 
+ 
   .parallaxone h2 {
     left: 227px;
     top: 97px;
@@ -711,6 +796,25 @@ body {
     float: left;
     flex-wrap: wrap;
     position: relative;
+  }
+
+  .h4address {
+    color: #696868;
+    margin-top: 19px;
+    display: block;
+}
+
+  .grid-test {
+    height:800px;
+    background: #1a1a1a;
+    /* background-color: #3b3c38; */
+
+  }
+
+  .grid-test-contact {
+    height: 770px;
+    /* background-color: #3b3c38; */
+    
   }
 
   .footer {
@@ -739,7 +843,7 @@ body {
   }
 
   .footer .footer-content .about h1 span {
-    color: #e6d92a;
+    color: #fc1020;
   }
   .footer .footer-content .about .contact span {
     display: block;
@@ -857,7 +961,7 @@ body {
   }
 
   .footer .footer-content .about h1 span {
-    color: #e6d92a;
+    color: #fc1020;
   }
   .footer .footer-content .about .contact span {
     display: block;
@@ -964,7 +1068,7 @@ body {
   }
 
   .section-tours {
-    height: 1200px;
+    height: 2819px;
   }
 
   .grid-test{
@@ -986,7 +1090,9 @@ body {
     margin-bottom: 80px;
     margin-left: 0rem;
     /* height: 118px; */
-    background: #bebdbd;
+    /* background: #bebdbd; */
+    background-color: #272727;
+
     /* display: block; */
   }
 
@@ -1037,9 +1143,16 @@ body {
   
   .contacth1 {
     margin-left: 18px;
+    margin-top: 70px;
   }
   
-  
+  .grid-test {
+    background-color: white;
+    /* background-color: #3b3c38; */
+
+  }
+
+
   .h4address {
     margin-top: 5px;
     margin-left: 18px;
@@ -1067,29 +1180,6 @@ body {
     position: relative;
   }
   
- */
-  
-  /* .row .col12-text_h5 {
-    margin-top: 25px;
-  }
-  .figure1 {
-    margin: 0 0 1rem;
-    margin-right: -194px;
-  }
-  
-  .col12_mission_text1 {
-    margin-left: 6px;
-  }
-  
-  .col12_mission1 {
-    margin-top: 24px;
-  }
-  .About-ses {
-    margin-left: 35px;
-  } */
-   
-
-
 
   .about-title {
     width: 100%;
@@ -1112,6 +1202,7 @@ body {
 
   .About-ses {
     margin-left: 2px ;
+    color:#fff
   }
 
   .footer {
@@ -1134,7 +1225,7 @@ body {
   }
 
   .footer .footer-content .about h1 span {
-    color: #e6d92a;
+    color: #fc1020;
   }
   .footer .footer-content .about .contact span {
     display: block;
@@ -1226,6 +1317,11 @@ body {
     
   }
   
+  .section-tours {
+    height: 3500px;
+  }
+
+
   
   .footer {
     background-color: #303036;
@@ -1247,7 +1343,7 @@ body {
   }
 
   .footer .footer-content .about h1 span {
-    color: #e6d92a;
+    color: #fc1020;
   }
   .footer .footer-content .about .contact span {
     display: block;

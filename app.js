@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Static Folder
@@ -66,7 +66,8 @@ app.post("/index", (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: "${{{req.body.email}}}", // sender address
-    to:"bardeaditya55@gmail.com", // list of receivers
+    // to:"bardeaditya55@gmail.com", // list of receivers
+    to:"sales@stride-es.com",
     subject: "AB", // Subject line
     text: "Hello From AB WEBDev", // plain text body
     html: output, // html body
@@ -97,5 +98,5 @@ app.get("/contact", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Server is running on PORT : 3000");
+  console.log("Server is running on PORT :8000");
 });
