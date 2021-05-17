@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Static Folder
@@ -37,7 +37,9 @@ app.set("view engine", "hbs");
 
 // template engine root
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index",{
+    title:"Stride_es | Home"
+  });
 });
 
 app.post("/index", (req, res) => {
@@ -66,8 +68,8 @@ app.post("/index", (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: "${{{req.body.email}}}", // sender address
-    // to:"bardeaditya55@gmail.com", // list of receivers
-    to:"sales@stride-es.com",
+    to:"bardeaditya55@gmail.com", // list of receivers
+    // to:"sales@stride-es.com",
     subject: "AB", // Subject line
     text: "Hello From AB WEBDev", // plain text body
     html: output, // html body
@@ -88,15 +90,26 @@ app.post("/index", (req, res) => {
 
 
 app.get("/index", (req, res) => {
-  res.render("index");
+  res.render("index",{
+    title: "Stride_es | Home",
+  });
 });
 app.get("/about", (req, res) => {
-  res.render("about");
+  res.render("about",{
+    title: "Stride_es | About",
+  });
 });
 app.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact" ,{
+    title: "Stride_es | Contact-Us",
+  });
+});
+app.get("/products", (req, res) => {
+  res.render("products" ,{
+    title: "Stride_es | Products",
+  });
 });
 
 app.listen(port, () => {
-  console.log("Server is running on PORT :8000");
+  console.log(`Server is running on PORT :${port}`);
 });
